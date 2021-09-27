@@ -13,6 +13,14 @@ public class User {
 	private List<Groupe> groupes;
 	
 	
+	public List<Groupe> getGroupes() {
+		return groupes;
+	}
+
+	public void setGroupes(List<Groupe> groupes) {
+		this.groupes = groupes;
+	}
+
 	public int getId() {
 		return id;
 	}
