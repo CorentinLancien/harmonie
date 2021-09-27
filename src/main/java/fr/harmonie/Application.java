@@ -1,4 +1,4 @@
-package harmoniefr.harmonie;
+package fr.harmonie;
 
 public class Application {
 
