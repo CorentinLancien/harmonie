@@ -1,0 +1,12 @@
+Utilisateurs => id, pseudo, 'pp'
+	- un utilisateur peut envoyer aucun ou plusieurs messages.
+Messages id, date, corps, format(img, gif, txt)
+	- un message est envoyé par un seul utilisateur.
+	- un message est enregistré lorsqu'un utilisateur écrit.
+
+- On peut écrire un message à un utilisateur ou un groupe d'utilisateur.
+
+Groupe => id, nom 
+
+Un groupe contient au moins deux utilisateurs
+Un utilisateur peut appartenir à plusieurs groupes.
