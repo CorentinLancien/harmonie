@@ -2,6 +2,11 @@ package fr.harmonie.model;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "groupe")
 public class Groupe {
 	private int id;
 	
