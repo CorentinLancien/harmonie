@@ -7,6 +7,4 @@ import fr.harmonie.model.Groupe;
 
 public interface IGroupeDao extends JpaRepository<Groupe, Integer>{
 	
-	
-	
 }

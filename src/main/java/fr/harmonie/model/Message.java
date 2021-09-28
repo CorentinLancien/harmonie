@@ -2,16 +2,36 @@ package fr.harmonie.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "message")
 public class Message {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "MES_ID")
 	private int id;
 	
+	@Column(name = "MES_DATE")
 	private Date dateCrea;
 	
+	@Column(name ="MES_CORPS")
 	private String corps;
 	
+	@ManyToOne
+	@JoinColumn(name = "MES_USER_ID")
 	private User user;
 	
+	@ManyToOne
+	@JoinColumn(name = "MES_GRP_ID")
 	private Groupe groupe;
 	
 	public User getUser() {
