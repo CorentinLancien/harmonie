@@ -51,7 +51,7 @@ public class JpaConfig {
 		hibernateProperties.setProperty("hibernate.show_sql", "true");	
 		
 		emf.setDataSource(datasource);
-		emf.setPackagesToScan("fr.formation.model");
+		emf.setPackagesToScan("fr.harmonie.model");
 		emf.setJpaVendorAdapter(vendorAdapter);
 		emf.setJpaProperties(hibernateProperties);
 		
