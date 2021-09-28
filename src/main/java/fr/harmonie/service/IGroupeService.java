@@ -1,11 +1,16 @@
 package fr.harmonie.service;
 
+import java.util.List;
+import java.util.Optional;
+
+import fr.harmonie.model.Groupe;
+
+
 public interface IGroupeService {
-	public findAll();
-	public findById(int id);
-	public save(Groupe groupe);
-	public delete(Groupe groupe);
-	public deleteById(int id);
-	public search(Groupe groupe);
+
+	public List<Groupe> findAll();
+	public Optional<Groupe> findById(Integer id);
+	public Groupe save(Groupe groupe);
+	public void remove(Integer id);
 
 }

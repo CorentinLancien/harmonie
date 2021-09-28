@@ -1,7 +1,12 @@
 package fr.harmonie.dao;
 
-public interface IGroupeDao {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import fr.harmonie.model.Groupe;
+
+
+public interface IGroupeDao extends JpaRepository<Groupe, Integer>{
+	
 	
 	
 }

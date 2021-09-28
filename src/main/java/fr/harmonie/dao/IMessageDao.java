@@ -1,11 +1,10 @@
 package fr.harmonie.dao;
 
-public interface IMessageDao {
-	public findAll();
-	public findById(int id);
-	public save(Message message);
-	public delete(Message message);
-	public deleteById(int id);
-	public search(Message message);
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import fr.harmonie.model.Message;
+
+public interface IMessageDao  extends JpaRepository<Message, Integer> {
+
 
 }

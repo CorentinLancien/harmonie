@@ -1,11 +1,17 @@
 package fr.harmonie.service;
 
+import java.util.List;
+import java.util.Optional;
+
+import fr.harmonie.model.Groupe;
+import fr.harmonie.model.User;
+
 public interface IUserService {
-	public findAll();
-	public findById(int id);
-	public save(User user);
-	public delete(User user);
-	public deleteById(int id);
-	public search(User user);
+
+	public List<User> findAll();
+	public Optional<User> findById(Integer id);
+	public User save(User user);
+	public void remove(Integer id);
+	
 	
 }
