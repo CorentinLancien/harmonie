@@ -10,3 +10,23 @@ Groupe => id, nom
 
 Un groupe contient au moins deux utilisateurs
 Un utilisateur peut appartenir Ã  plusieurs groupes.
+
+Rechercher message
+pagination ? nb de messages
+Sauvegarder message
+Relire les messages
+Edition des messages
+Suppression des message
+
+
+int id				PRO_ID				id
+string libelle		PRO_LIBELLE			nom
+fourniseur f		#PRO_FOUR_ID		list<produit>
+
+JPQL
+
+find rechercher/id
+persist ajouter
+merge modifier
+remove supprimer
+createQuery  recherche poussé
