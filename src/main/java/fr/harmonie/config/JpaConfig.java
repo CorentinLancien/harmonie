@@ -28,7 +28,7 @@ public class JpaConfig {
 		
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		
-		dataSource.setUrl("jdbc:mysql://localhost:3306/eshop_iia?createDatabaseIfNotExist=true");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/harmonie?createDatabaseIfNotExist=true");
 		dataSource.setUsername("root");
 		dataSource.setPassword("");
 		dataSource.setMaxTotal(10);
