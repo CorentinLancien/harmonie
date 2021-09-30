@@ -1,0 +1,29 @@
+<html xmlns:th
+="http://www.thymeleaf.org">
+
+
+<head >
+  <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css
+">
+ <link th:href="@{css/login.css}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="form">
+    <form method="post">
+      <span id="login">Login</span>
+      <div class="inputdata">
+        <div id="usernameinfo">
+          <i id="icon" class="im im-user-circle"></i>
+        <input id="pseudo" name="pseudo" type="text" placeholder="Pseudo">
+          </div>
+        </div>
+
+      <span id="error"></span>
+
+      <button id="submit">Sign in</button>
+    </form>
+    <hr id="formLine">
+  </div>
+</body>
+</html>

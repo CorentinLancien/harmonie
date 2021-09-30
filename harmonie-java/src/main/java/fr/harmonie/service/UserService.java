@@ -37,4 +37,9 @@ public class UserService implements IUserService{
 	}
 
 
+	@Override
+	public User findByPseudo(String username) {
+		
+		return this.daoUser.findByPseudo(username);
+	}
 }
