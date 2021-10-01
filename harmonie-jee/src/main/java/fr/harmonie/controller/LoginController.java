@@ -30,10 +30,17 @@ public class LoginController {
 	@PostMapping()
 	public String signIn(User user) {
 		
-		User myUser = this.srvUser.findByPseudo(user.getPseudo());
-		this.userSession.setId(myUser.getId());
-		this.userSession.setUsername(myUser.getPseudo());
+		String retour = "redirect:/home";
 		
-		return "redirect:/home";
+		User myUser = this.srvUser.findByPseudo(user.getPseudo());
+		if(myUser != null) {
+			this.userSession.setId(myUser.getId());
+			this.userSession.setUsername(myUser.getPseudo());
+		}
+		else {
+			retour = "login";
+		}
+		
+		return retour;
 	}
 }

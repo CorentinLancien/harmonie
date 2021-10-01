@@ -5,6 +5,7 @@
 <title>harmonie</title>
 </head>
 <body>
-	<h1>Coucou [[ ${user.username} ]]</h1>
+	
+	<h1 th:if="${user.username} != null">Coucou [[ ${user.username} ]]</h1>
 </body>
 </html>
