@@ -33,12 +33,21 @@ public class WebConfig implements WebMvcConfigurer{
 	public ThymeleafViewResolver viewResolver(SpringTemplateEngine templateEngine) {
 		ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
 		viewResolver.setTemplateEngine(templateEngine);
-	return viewResolver;
+		return viewResolver;
 	}
 	
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/css/**").addResourceLocations("/css/");
-		registry.addResourceHandler("/js/**").addResourceLocations("/js/");
-		}
+//	@Bean
+//	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//		registry.addResourceHandler("/css/**").addResourceLocations("/css/");
+//		registry.addResourceHandler("/js/**").addResourceLocations("/js/");
+//	}
+
+//	@Bean
+//	public ResourceHandlerRegistry addResourceHandlers(ResourceHandlerRegistry registry) {
+//		registry.addResourceHandler("/css/**").addResourceLocations("/css/");
+//		registry.addResourceHandler("/images/**").addResourceLocations("/images/");
+//		
+//		return registry;
+//	}
 
 }
