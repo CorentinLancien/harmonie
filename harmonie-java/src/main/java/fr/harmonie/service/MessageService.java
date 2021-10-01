@@ -36,4 +36,15 @@ public class MessageService implements IMessageService{
 		this.daoMessage.deleteById(id);
 	}
 
+	@Override
+	public List<Message> findAllByGroupeId(Integer groupeId) {
+		return this.daoMessage.findAllByGroupeId(groupeId)
+	}
+
+	@Override
+	public List<Message> findAllByUserIdAndGroupeId(Integer userId, Integer groupeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
