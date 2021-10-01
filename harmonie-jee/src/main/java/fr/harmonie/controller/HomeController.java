@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import fr.harmonie.model.Message;
+import fr.harmonie.service.IGroupeService;
 import fr.harmonie.service.IMessageService;
+import fr.harmonie.service.IUserService;
 import fr.harmonie.session.UserSession;
 
 @Controller
@@ -21,6 +23,12 @@ public class HomeController {
 
 	@Autowired
 	private IMessageService srvMessage;
+
+	@Autowired
+	private IUserService srvUser;
+
+	@Autowired
+	private IGroupeService srvGroupe;
 	
 	@Autowired
 	UserSession userSession;
@@ -35,7 +43,9 @@ public class HomeController {
 	@PostMapping("/add")
 	public String ajouter(String messageText) {
 		Message monMessage = new Message();
+
 		monMessage.setCorps(messageText);
+		monMessage.setUser(this.srvUser.findByPseudo(this.userSession.getUsername()));
 		
 		this.srvMessage.save(monMessage);
 		
