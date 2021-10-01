@@ -10,6 +10,7 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import fr.harmonie.model.User;
 import fr.harmonie.service.UserService;
+import fr.harmonie.session.UserSession;
 
 @Controller
 @RequestMapping("/login")
@@ -18,17 +19,28 @@ public class LoginController {
 	@Autowired
 	UserService srvUser;
 	
+	@Autowired
+	UserSession userSession;
+	
 	@GetMapping
 	public String login() {
 		return "login";
 	}
 	
 	@PostMapping()
-	public String signIn(User user, Model model) {
+	public String signIn(User user) {
 		
-		model.addAttribute("user", this.srvUser.findByPseudo(user.getPseudo()));
-		System.out.println("coucou");
+		String retour = "redirect:/home";
 		
-		return "home";
+		User myUser = this.srvUser.findByPseudo(user.getPseudo());
+		if(myUser != null) {
+			this.userSession.setId(myUser.getId());
+			this.userSession.setUsername(myUser.getPseudo());
+		}
+		else {
+			retour = "login";
+		}
+		
+		return retour;
 	}
 }

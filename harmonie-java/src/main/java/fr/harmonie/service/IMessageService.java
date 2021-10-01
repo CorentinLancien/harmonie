@@ -13,5 +13,6 @@ public interface IMessageService {
 	public Message save(Message message);
 	public void remove(Integer id);
 
-
+	public List<Message> findAllByGroupeId(Integer groupeId);
+	public List<Message> findAllByUserIdAndGroupeId(Integer userId, Integer groupeId);
 }

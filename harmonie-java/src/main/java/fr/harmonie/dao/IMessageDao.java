@@ -10,5 +10,7 @@ import fr.harmonie.model.Message;
 
 public interface IMessageDao  extends JpaRepository<Message, Integer> {
 
+	public List<Message> findAllByGroupeId(int groupeId);
+	public List<Message> findAllByUserIdAndGroupeId(int userId, int groupeId);
 
 }
