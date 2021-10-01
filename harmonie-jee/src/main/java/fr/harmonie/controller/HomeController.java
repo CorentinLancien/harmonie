@@ -36,6 +36,7 @@ public class HomeController {
 	public String ajouter(String messageText) {
 		Message monMessage = new Message();
 		monMessage.setCorps(messageText);
+		
 		this.srvMessage.save(monMessage);
 		
 		return "redirect:./";

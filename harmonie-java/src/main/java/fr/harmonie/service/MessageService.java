@@ -38,7 +38,7 @@ public class MessageService implements IMessageService{
 
 	@Override
 	public List<Message> findAllByGroupeId(Integer groupeId) {
-		return this.daoMessage.findAllByGroupeId(groupeId)
+		return this.daoMessage.findAllByGroupeId(groupeId);
 	}
 
 	@Override
